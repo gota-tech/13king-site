@@ -27,13 +27,17 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
-  overflow-x: clip;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 68px),
     linear-gradient(145deg, transparent 0 36%, rgba(255, 255, 255, 0.035) 36% 37%, transparent 37% 100%),
@@ -67,6 +71,19 @@ a {
 img {
   display: block;
   max-width: 100%;
+}
+
+section,
+div,
+article,
+header,
+main,
+footer,
+p,
+h1,
+h2,
+h3 {
+  min-width: 0;
 }
 
 .site-header {
@@ -582,6 +599,7 @@ h3 {
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
 }
 
 .photo-track {
@@ -890,7 +908,7 @@ address {
   }
 
   .section {
-    width: min(100% - 1rem, 1120px);
+    width: min(92vw, 1120px);
     padding: 2.6rem 0;
   }
 
@@ -926,12 +944,15 @@ address {
   }
 
   .hero-title {
-    max-width: calc(100vw - 1.25rem);
-    font-size: clamp(1.18rem, 5.25vw, 1.48rem);
+    width: 92vw;
+    max-width: 92vw;
+    font-size: min(4.2vw, 1.05rem);
+    line-height: 1.18;
   }
 
   .hero-inner {
-    width: min(100% - 1rem, 1120px);
+    width: min(92vw, 1120px);
+    max-width: 92vw;
     padding: 7.8rem 0 2.1rem;
   }
 
@@ -977,14 +998,17 @@ address {
 
   .photo-flow-heading {
     display: block;
-    width: min(100% - 1rem, 1120px);
+    width: min(92vw, 1120px);
   }
 
   .photo-marquee {
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-inline: 0.5rem;
+    padding-inline: 4vw;
     mask-image: none;
+    -webkit-mask-image: none;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -1030,15 +1054,17 @@ address {
 
   .text-line,
   .copy-line {
-    display: inline;
-    width: auto;
-    word-break: keep-all;
-    overflow-wrap: normal;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    word-break: normal;
+    overflow-wrap: break-word;
+    line-break: strict;
   }
 
   .text-line::after,
   .copy-line::after {
-    content: " ";
+    content: "";
   }
 
   .hero-title .text-line,
@@ -1050,6 +1076,7 @@ address {
   .hero-title .text-line {
     white-space: nowrap;
     overflow-wrap: keep-all;
+    max-width: 92vw;
   }
 
   .owner-title .text-line {
@@ -1129,7 +1156,7 @@ address {
 
 @media (max-width: 390px) {
   .hero-title {
-    font-size: clamp(1rem, 4.55vw, 1.16rem);
+    font-size: min(3.65vw, 0.92rem);
   }
 
   .hero-title .text-line {
@@ -1147,6 +1174,6 @@ address {
 
 @media (max-width: 350px) {
   .hero-title {
-    font-size: 0.94rem;
+    font-size: 0.82rem;
   }
 }
