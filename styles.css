@@ -586,7 +586,7 @@ h3 {
   display: flex;
   gap: 0.9rem;
   width: max-content;
-  animation: photo-flow 34s linear infinite;
+  animation: photo-flow 18s linear infinite;
   will-change: transform;
 }
 
@@ -963,13 +963,24 @@ address {
   }
 
   .photo-track {
+    width: auto;
+    overflow-x: auto;
+    padding-inline: 0.5rem;
     animation: none;
-    transform: translate3d(var(--scroll-shift, 0px), 0, 0);
-    transition: transform 80ms linear;
+    transform: none;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    will-change: auto;
+  }
+
+  .photo-track::-webkit-scrollbar {
+    display: none;
   }
 
   .flow-card {
     flex-basis: min(76vw, 310px);
+    scroll-snap-align: center;
   }
 
   .visual-frame {
@@ -989,6 +1000,28 @@ address {
   .luxury-intro p:not(.eyebrow) {
     font-size: 0.95rem;
     line-height: 1.82;
+  }
+
+  .text-line,
+  .copy-line {
+    display: inline;
+    width: auto;
+  }
+
+  .text-line::after,
+  .copy-line::after {
+    content: " ";
+  }
+
+  .hero-title .text-line,
+  .owner-title .text-line {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .hero-title .text-line::after,
+  .owner-title .text-line::after {
+    content: "";
   }
 
   .luxury-strip,
