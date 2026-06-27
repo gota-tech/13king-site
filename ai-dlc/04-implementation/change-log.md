@@ -1,0 +1,15 @@
+# Implementation Change Log
+
+Record implementation changes here when the site files are created or modified.
+
+| Date | Change | Files | Prompt/Reason | Validation |
+| --- | --- | --- | --- | --- |
+| 2026-06-27 | Added placeholder asset strategy and first LP copy draft. | `assets/images/`, `ai-dlc/02-design/content-draft.md`, `ai-dlc/02-design/technical-approach.md`, `ai-dlc/03-planning/backlog.md` | Owner confirmed store photos exist, no logo yet, and placeholder progress is OK. | File structure and draft created. |
+| 2026-06-27 | Created first static LP implementation. | `index.html`, `styles.css`, `script.js` | Owner asked to start with HTML/CSS/JavaScript. | `node --check script.js` passed. Browser plugin had no available browser in this environment, so visual QA is still pending. |
+| 2026-06-27 | Added embedded Google Map, owner greeting, detailed drink menu, pop accents, and shisha BAR wording. | `index.html`, `styles.css`, AI-DLC docs | Owner requested map embed, owner greeting, detailed drink menu, more pop design, and wording change. | `node --check script.js` passed. Old wording search passed. Browser visual QA still pending due to no available browser in this environment. |
+| 2026-06-27 | Updated official Instagram link and marble design direction. | `index.html`, `styles.css`, AI-DLC docs | Owner provided official Instagram and requested less AI-like, marble-style design with Instagram gradient colors. | `node --check script.js` passed. Official Instagram link search passed. Browser visual QA still pending due to no available browser in this environment. |
+| 2026-06-27 | Added semantic line breaks for hero and section copy. | `index.html`, `styles.css`, `ai-dlc/02-design/content-draft.md` | Owner requested hero title split into two stable lines and other text to break at meaningful boundaries across devices. | `node --check script.js` passed. Browser visual QA still pending due to no available browser in this environment. |
+| 2026-06-27 | Added owner image slot and darts photo slot. | `index.html`, `styles.css`, `assets/images/README.md`, AI-DLC docs | Owner has a darts photo and plans to generate an owner image with AI. | `node --check script.js` passed. Image filename references checked. Browser visual QA still pending due to no available browser in this environment. |
+| 2026-06-27 | Replaced static photo gallery with flowing photo marquee UI. | `index.html`, `styles.css` | Owner wanted a UI where photos flow horizontally. | Pending static checks. |
+| 2026-06-27 | Removed gallery helper text and refined contact heading. | `index.html`, `ai-dlc/02-design/content-draft.md` | Owner requested removing the English gallery helper text and replacing the contact heading with a more natural phrase. | Pending static checks. |
+| 2026-06-27 | Added luxury mood bridge section between atmosphere and features. | `index.html`, `styles.css` | Owner felt the space between atmosphere and features was visually sparse and requested more premium design/copy. | Pending static checks. |
