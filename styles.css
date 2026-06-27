@@ -944,10 +944,10 @@ address {
   }
 
   .hero-title {
-    width: 92vw;
-    max-width: 92vw;
-    font-size: min(4.2vw, 1.05rem);
-    line-height: 1.18;
+    width: min(94vw, 100%);
+    max-width: 94vw;
+    font-size: clamp(1.55rem, 6.5vw, 2.1rem);
+    line-height: 1.12;
   }
 
   .hero-inner {
@@ -1076,7 +1076,7 @@ address {
   .hero-title .text-line {
     white-space: nowrap;
     overflow-wrap: keep-all;
-    max-width: 92vw;
+    max-width: 94vw;
   }
 
   .owner-title .text-line {
@@ -1156,7 +1156,7 @@ address {
 
 @media (max-width: 390px) {
   .hero-title {
-    font-size: min(3.65vw, 0.92rem);
+    font-size: clamp(1.28rem, 6.35vw, 1.55rem);
   }
 
   .hero-title .text-line {
@@ -1174,6 +1174,6 @@ address {
 
 @media (max-width: 350px) {
   .hero-title {
-    font-size: 0.82rem;
+    font-size: clamp(1.18rem, 6.1vw, 1.34rem);
   }
 }
