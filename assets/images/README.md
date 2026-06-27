@@ -10,6 +10,8 @@ Expected filenames:
 - `shisha.jpg`: Shisha
 - `darts.jpg`: Darts area or darts machine
 - `owner.jpg`: AI-generated owner portrait or owner image
+- `sponsor-1.jpg`: First sponsor/supporter introduction image
+- `sponsor-2.jpg`: Second sponsor/supporter introduction image
 - `karaoke-darts.jpg`: Optional combined karaoke or darts area photo
 - `entrance.jpg`: Exterior or entrance
 

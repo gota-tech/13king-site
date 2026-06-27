@@ -773,6 +773,17 @@ address {
   padding: clamp(2rem, 5vw, 3.5rem);
 }
 
+.sponsor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.sponsor-card {
+  min-height: 420px;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -912,6 +923,10 @@ address {
     font-size: clamp(1.4rem, 6.5vw, 1.95rem);
   }
 
+  .hero-title {
+    font-size: clamp(1.72rem, 7.35vw, 2.12rem);
+  }
+
   .hero-inner {
     width: min(100% - 1rem, 1120px);
     padding: 7.8rem 0 2.1rem;
@@ -1037,7 +1052,8 @@ address {
 
   .luxury-strip,
   .owner-section,
-  .contact-section {
+  .contact-section,
+  .sponsor-section {
     padding: 1.1rem;
   }
 
@@ -1089,11 +1105,20 @@ address {
     min-height: 300px;
     height: 300px;
   }
+
+  .sponsor-grid {
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+
+  .sponsor-card {
+    min-height: 260px;
+  }
 }
 
 @media (max-width: 390px) {
-  h1 {
-    font-size: clamp(1.62rem, 7.35vw, 1.96rem);
+  .hero-title {
+    font-size: clamp(1.36rem, 6.25vw, 1.66rem);
   }
 
   .hero-title .text-line {
@@ -1110,7 +1135,7 @@ address {
 }
 
 @media (max-width: 350px) {
-  h1 {
-    font-size: 1.52rem;
+  .hero-title {
+    font-size: 1.28rem;
   }
 }
