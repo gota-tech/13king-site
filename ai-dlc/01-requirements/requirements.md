@@ -33,6 +33,7 @@
 ## Functional Requirements
 
 - Mobile-first responsive layout
+- iPhone-first layout for common widths such as 375px, 390px, and 430px
 - Fast first load
 - Clear navigation to access, menu, and contact
 - External links for map and social media
