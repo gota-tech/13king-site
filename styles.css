@@ -962,20 +962,28 @@ address {
     width: min(100% - 1rem, 1120px);
   }
 
-  .photo-track {
-    width: auto;
+  .photo-marquee {
     overflow-x: auto;
+    overflow-y: hidden;
     padding-inline: 0.5rem;
-    animation: none;
-    transform: none;
+    mask-image: none;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    will-change: auto;
+    touch-action: pan-x;
   }
 
-  .photo-track::-webkit-scrollbar {
+  .photo-marquee::-webkit-scrollbar {
     display: none;
+  }
+
+  .photo-track {
+    width: max-content;
+    overflow: visible;
+    padding-inline: 0;
+    animation: none !important;
+    transform: none !important;
+    will-change: auto;
   }
 
   .flow-card {
@@ -1006,6 +1014,8 @@ address {
   .copy-line {
     display: inline;
     width: auto;
+    word-break: keep-all;
+    overflow-wrap: normal;
   }
 
   .text-line::after,
@@ -1017,6 +1027,7 @@ address {
   .owner-title .text-line {
     display: block;
     white-space: nowrap;
+    word-break: keep-all;
   }
 
   .hero-title .text-line::after,
@@ -1082,7 +1093,7 @@ address {
 
 @media (max-width: 390px) {
   h1 {
-    font-size: clamp(1.88rem, 8.6vw, 2.24rem);
+    font-size: clamp(1.62rem, 7.35vw, 1.96rem);
   }
 
   .hero-title .text-line {
@@ -1095,5 +1106,11 @@ address {
 
   .owner-title {
     font-size: clamp(1.32rem, 6.1vw, 1.74rem);
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.52rem;
   }
 }
