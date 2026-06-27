@@ -27,11 +27,13 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+  overflow-x: clip;
   background:
     linear-gradient(120deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 68px),
     linear-gradient(145deg, transparent 0 36%, rgba(255, 255, 255, 0.035) 36% 37%, transparent 37% 100%),
@@ -924,7 +926,8 @@ address {
   }
 
   .hero-title {
-    font-size: clamp(1.72rem, 7.35vw, 2.12rem);
+    max-width: calc(100vw - 1.25rem);
+    font-size: clamp(1.18rem, 5.25vw, 1.48rem);
   }
 
   .hero-inner {
@@ -1041,8 +1044,16 @@ address {
   .hero-title .text-line,
   .owner-title .text-line {
     display: block;
-    white-space: nowrap;
     word-break: keep-all;
+  }
+
+  .hero-title .text-line {
+    white-space: nowrap;
+    overflow-wrap: keep-all;
+  }
+
+  .owner-title .text-line {
+    white-space: nowrap;
   }
 
   .hero-title .text-line::after,
@@ -1118,7 +1129,7 @@ address {
 
 @media (max-width: 390px) {
   .hero-title {
-    font-size: clamp(1.36rem, 6.25vw, 1.66rem);
+    font-size: clamp(1rem, 4.55vw, 1.16rem);
   }
 
   .hero-title .text-line {
@@ -1136,6 +1147,6 @@ address {
 
 @media (max-width: 350px) {
   .hero-title {
-    font-size: 1.28rem;
+    font-size: 0.94rem;
   }
 }
