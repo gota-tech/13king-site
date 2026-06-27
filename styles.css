@@ -963,7 +963,9 @@ address {
   }
 
   .photo-track {
-    animation-duration: 26s;
+    animation: none;
+    transform: translate3d(var(--scroll-shift, 0px), 0, 0);
+    transition: transform 80ms linear;
   }
 
   .flow-card {
